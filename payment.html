@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grocery Store</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+        <meta name="Author" content="">
+        <meta name="Keywords" content="">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="Description" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="stylesheetproj.css">
+        <link rel = "icon" href = "tabicon.png" type = "image/x-icon">
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500);
+
+.bank {
+  padding: 60px 0;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(205, 240, 240) 11.3%, rgb(129, 185, 162) 41.2%, rgb(255, 255, 255) 77.8% );
+  margin: 0 auto;
+  width: 600px;
+}
+.body-text {
+  padding: 0 20px 30px 20px;
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #333;
+  text-align: center;
+  line-height: 1.2em;
+}
+.form-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-wrapper {
+  background-color: #d9e5ee;
+  width: 100%;
+  display: flex;
+
+}
+.personal-information {
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  color: #fff;
+  padding: 1px 0;
+  text-align: center;
+}
+h1 {
+  font-size: 1.3em;
+  font-family: "Roboto"
+}
+input {
+  margin: 1px 0;
+  padding-left: 3%;
+  font-size: 14px;
+  color: #000000;
+}
+input[type="text"]{
+  display: block;
+  height: 50px;
+  width: 97%;
+  border: 2px;
+}
+input[type="password"]{
+  display: block;
+  height: 50px;
+  width: 97%;
+  border: none;
+}
+input[type="email"]{
+  display: block;
+  height: 50px;
+  width: 97%;
+  border: none;
+}
+input[type="submit"]{
+  display: block;
+  height: 60px;
+  width: 100%;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(to right, #546cf3 0%, #26D0CE  51%, #1A2980  100%);
+  margin-top: 2px;
+  cursor: pointer;
+  font-size: 1.6em;
+  color: white;      
+  transition: 3s;      
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+         
+input[type="submit"]:hover{
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+#column-left {
+  width: 46.5%;
+  float: left;
+  margin-bottom: 2px;
+}
+#column-right {
+  width: 46.5%;
+  float: right;
+}
+
+@media only screen and (max-width: 480px){
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .form-container {
+    margin: 0 2%;
+  }
+  input {
+    font-size: 1em;
+  }
+  .input-button {
+    width: 100%;
+  }
+  .input-field {
+    width: 96.5%;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  input {
+    margin: 2px 0;
+  }
+  input[type="submit"]{
+    height: 50px;
+  }
+  .column-left {
+    width: 96.5%;
+    display: block;
+    float: none;
+  }
+  .column-right {
+    width: 96.5%;
+    display: block;
+    float: none;
+  }
+}
+.cod{
+  cursor: pointer;
+  text-align: center;
+}
+.container{
+  cursor: pointer;
+  font-size: medium;
+}
+.check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+
+.container:hover input ~ .check {
+  background-color: gray;
+}
+
+.container input:checked ~ .check {
+  background-color: rgb(125, 125, 245);
+}
+            </style>
+    </head>
+
+<div class =>
+
+</div>
+    <body>
+        <div class="parallax">
+            <div class="page-title">Organicum Salutem</div>
+        </div>
+        <div class="menu" id="sticky">
+            <div id="menubar">
+                <ul id="menu">
+                  <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+                  <li><a href="HOMEPAGE.html">Home</a></li>
+                  <li><a href="veg.html">Vegetables</a></li>
+                  <li><a href="Fruity.html">Fruits</a></li>
+                  <li><a href="pulses.html">Legumes & Spices</a></li>
+                  <li class = "cart selected"><a href="cart.html">MyCart<i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i><span>0</span class='badge badge-warning lblCartCount'  ></a></li>
+                </ul> </div>
+            <div class="search-box">
+                <form>
+                    <input typr="text" placeholder="Search.." name="search" 
+                    class="search-input"/>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        
+    <div class = "productss">
+
+    </div> 
+
+
+    <BR><BR>
+      <hr width=”90%”>
+    <div class="cod" >
+      <h1 style="font-size: 28px;">CASH ON DELIVERY</h1>
+      <div class = "bank">
+        <div class="body-text">Due to this Corona Pandemic we are encouraging online payments</div>
+      <form  action="billing.jsp" onclick="localStorage.clear();" onSubmit="return Formvalidation();" method="POST">
+        <div class="form-container">
+          <div class="personal-information">
+            <h1>Billing address</h1>
+          </div> <!-- end of personal-information -->
+          <br>
+              <input id="statee" class="input-field" type="text" name="state" required="required" autocomplete="on" maxlength="20" placeholder="State"/>
+              <input id="cityy" class="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
+              <input id ="zipcodee" class="column-right" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="6" placeholder="PIN code"/>
+              <label style="position:relative; padding-left: 2px;top:8px;" ><i class="fa fa-address-card"></i> Address</label><br><br>
+              <input id= "Street11" class="input-field" type="text" name="street1" required="required" autocomplete="on" maxlength="100" placeholder="Street Address 1"/>
+              <input id= "Street22" class="input-field" type="text" name="street2" required="required" autocomplete="on" maxlength="100" placeholder="Street Address 2"/>
+              <label style = "position:relative;  top:8px;"><i class="fa fa-envelope"></i> Email</label><br><br>
+              <input id= "emaill" class="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
+             <br>
+              <input class="input-field" type="submit" value="Proceed Payment"/>
+            
+        </form>
+      </div>
+    </div>
+
+<br> <br> <br>
+
+    </div>
+    <br> <br> <br> <br> <br>
+    <hr width=”90%”>
+    <br> <br> <br>
+    <h1 style="font-size: 28px; text-align: center;">ONLINE PAYEMENT</h1>
+   <div class = "bank">
+     <div class="body-text">Due to this Corona Pandemic we are encouraging online payments</div>
+   <form  action="billing.jsp" onclick="localStorage.clear();" onSubmit="return formvalidation();" method="POST">
+     <div class="form-container">
+       <div class="personal-information">
+         <h1>Billing address</h1>
+       </div> <!-- end of personal-information -->
+       <br>
+           <input id="state" class="input-field" type="text" name="state" required="required" autocomplete="on" maxlength="20" placeholder="State"/>
+           <input id="city" class="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
+           <input id ="zipcode" class="column-right" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="6" placeholder="PIN code"/>
+           <label style="position:relative; padding-left: 2px;top:8px;" ><i class="fa fa-address-card"></i> Address</label><br><br>
+           <input id= "Street1" class="input-field" type="text" name="street1" required="required" autocomplete="on" maxlength="100" placeholder="Street Address 1"/>
+           <input id= "Street2" class="input-field" type="text" name="street2" required="required" autocomplete="on" maxlength="100" placeholder="Street Address 2"/>
+           <label style = "position:relative;  top:8px;"><i class="fa fa-envelope"></i> Email</label><br><br>
+           <input id= "email" class="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
+           <div class="personal-information">
+            <h1>Enter the Card Details</h1>
+          </div>
+          <br>
+           <div class="card-wrapper"></div>
+           <br>
+           <label><i class="fa fa-user"></i>Name of the Card holder</label>
+           <br><br>
+           <input id= "fname"  class="column-left" type="text" name="fname" placeholder="First Name"/>
+           <input id= "lname"  class="column-right" type="text" name="lname" placeholder="Surname"/>
+           <label style = "position:relative; padding-left: 2px ; top:8px;"> <i class="fa fa-credit-card" ></i>Debit/ Credit Card</label>
+           <br><br>
+           <input id= "cardnum" class="input-field" maxlength="20" type="text" onkeyup="this.value= this.value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ')" name="cnumber" placeholder="Card Number"/>
+           <input id= "exp" class="column-left" type="text" name="exp" maxlength="7" onkeyup="this.value=this.value.replace(/^(\d\d)(\d)$/g,'$1/$2').replace(/[^\d\/]/g,'')" placeholder="MM / YYYY"/>
+           <input id= "cvv" class="column-right" type="password" maxlength="3" name="cvv" placeholder="CCV"/>
+           <br>
+           <input class="input-field" type="submit" value="Proceed Payment"/>
+         
+     </form>
+   </div>
+ </div>
+</script>
+        <script src ="cartt.js"></script>
+        <script src ="cartt2.js"></script>
+        <script src ="cartt3.js"></script>
+
+    <!--footer starts here-->
+   
+<script>
+  function formvalidation()
+        {
+            var state = document.getElementById('state');
+            var city = document.getElementById('city');
+            var zip = document.getElementById('zipcode');
+            var stre = document.getElementById('Street1');
+            var stree = document.getElementById('Street2');
+            var email = document.getElementById('email');
+            var fname = document.getElementById('fname');
+            var lname = document.getElementById('lname');
+            var card = document.getElementById('cardnum');
+            var epir = document.getElementById('exp');
+            var cVV = document.getElementById('cvv');
+            var patt1 = /[0-9!@#$%^&*()]/;
+            var patt2 = /[#$%^&*()]/;
+            var patt3 = /@gmail.com|@yahoo.com|@outlook.com/;
+            if(state.value=="" || city.value=="" || zip.value=="" || stre.value=="" || stree.value=="" || email.value=="" || fname.value=="" || lname.value=="" || card.value=="" || epir.value=="" || cVV.value=="" ){
+            window.alert("Fields Must not be empty!!!");
+        }
+            if(patt1.test(fname.value)|| patt1.test(lname.value))
+            {
+            window.alert("Name must not contain any symbols!!!");
+            return false;
+            }
+            if(patt2.test(email.value) || !patt3.test(email.value))
+            {
+            window.alert("Invalid email id");
+            return false;
+            }
+            if(cVV.value.length!=3)
+            {
+            window.alert("Enter the card details properly");
+            return false;
+            }
+            return true;
+        }
+function Formvalidation()
+        {
+            var state = document.getElementById('statee');
+            var city = document.getElementById('cityy');
+            var zip = document.getElementById('zipcodee');
+            var stre = document.getElementById('Street11');
+            var stree = document.getElementById('Street22');
+            var email = document.getElementById('emaill');
+            var patt1 = /[0-9!@#$%^&*()]/;
+            var patt2 = /[#$%^&*()]/;
+            var patt3 = /@gmail.com|@yahoo.com|@outlook.com/;
+            if(state.value=="" || city.value=="" || zip.value=="" || stre.value=="" || stree.value=="" || email.value==""){
+            window.alert("Fields Must not be empty!!!");
+            }
+            if(patt2.test(email.value) || !patt3.test(email.value))
+            {
+            window.alert("Invalid email id");
+            return false;
+            }
+  
+            return true;
+        }
+</script>
+     <br> <br> <br> <br> <br>
+  <main> 
+</main>  
+<footer class="footer">
+    <div class="footer-left">
+        <img src="logo.png" alt=""> 
+        <h2>About us</h2>
+        <p>Farming looks mighty easy when your plow is a pencil and you're a thousand miles from the corn field.</p>
+        <p>We believe in collaborating with a large number of certified farmers who do not use or endorse pesticides or genetically modified seeds in the production of their crops. 
+          Our goal is to provide a chemical-free, nutritious meal to our customers for optimal nutrition.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> 
+          <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a>
+        </div> 
+    </div> 
+    <ul class="footer-right">
+        <li>
+            <h2>Categories</h2>
+
+            <ul class="box">
+                <li><a href="#">Vegetables</a></li>
+                <li><a href="#">Fruits</a></li>
+                <li><a href="#">Legumes</a></li> 
+                <li><a href="#">Spices</a></li> 
+            </ul>
+        </li>
+        <li class="features">
+            <h2>Useful Links</h2>
+        
+            <ul class="box">
+                <li><a href="#">Terms & conditions</a></li>
+                <li><a href="#">Pricing</a></li> 
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">SiteMap</a></li> 
+                <li><a href="#">Certifications</a></li>
+                <li><a href="#">Customer Service</a></li>
+            </ul>
+        </li>
+        <li>
+            <h2>Get In Touch</h2>
+            
+            <ul class="box">
+                <li><a href="#">158, Moparru - 522312</a></li>
+                <li><a href="#">Amarthalur Mandal</a></li>
+                <li><a href="#">Guntur District</a></li> 
+                <li><a href="#">Andhra Pradesh</a></li>
+                <br><br>
+                <li>customercare@organicgrocery.com</li>
+                <li>+919827378229</li>
+            </ul>
+        </li>
+    </ul>
+            
+    <div class="footer-bottom">
+        <p> <i class="fa fa-copyright fa-lx"></i> Organic Grocery store. All rights reserved.</p>
+    </div>
+</footer>
+    </body>
+</html>
