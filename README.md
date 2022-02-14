@@ -1,5 +1,6 @@
 # HTML-and-Data-base-project
 Algorithm:
+
 Step 0: START
 
 Step 1: User will register to the app if he new to the app or else he will login using the  existing account details.
@@ -18,8 +19,9 @@ Step 6: User can add (or) delete an item(s) or even whole cart items at once in 
 {A subfolder Located at \AppData\Local\Google\Chrome\User Data\Default\Local Storage} in which enables the browsers to the key value pairs (represents storage objects).
 
 Step 7: After the desired products are added to cart user will be asked to choose the payment method
-  ❖ Cash On Delivery (COD)
-  ❖ Online Payment
+
+❖ Cash On Delivery (COD)
+❖ Online Payment
   
 Step 8: User can fill the details of billing address and Bank details Based on the mode of  payment that he/she chosen. These details are stored in the data base in the table
 ‘billingadd’ having columns
